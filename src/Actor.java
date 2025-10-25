@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Actor extends Person {
-    int height;
+    private int height;
 
     public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
@@ -15,8 +15,7 @@ public class Actor extends Person {
         if (this.getClass() != obj.getClass()) return false; // сравниваем классы
         Actor otherActor = (Actor) obj; // открываем доступ к полям другого объекта
         return Objects.equals(name, otherActor.name) && // проверяем все поля
-                Objects.equals(surname, otherActor.surname) &&
-                (gender == otherActor.gender) &&// нужно логическое «и»
+                Objects.equals(surname, otherActor.surname) && (gender == otherActor.gender) &&// нужно логическое «и»
                 (height == otherActor.height); // примитивы сравниваем через ==
     }
 

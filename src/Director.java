@@ -1,5 +1,5 @@
 public class Director extends Person {
-    public static int numberOfShows;
+    private int numberOfShows;
 
     public Director(String name, String surname, Gender gender, int numberOfShows) {
         super(name, surname, gender);
@@ -10,6 +10,7 @@ public class Director extends Person {
     public String toString() {
         return "Режиссер: " + name + " " + surname + ".";
     }
+
     public static void printDirector(String name, String surname, Gender gender, int numberOfShows) {
         Director director = new Director(name, surname, gender, numberOfShows);
         System.out.println(director);

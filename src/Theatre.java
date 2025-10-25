@@ -63,5 +63,6 @@ public class Theatre {
         SwanLake.printLibrettoText();
         System.out.println("Либретто Кармен:");
         Carmen.printLibrettoText();
+
     }
 }
